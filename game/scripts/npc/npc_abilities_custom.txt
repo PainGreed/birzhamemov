@@ -7529,7 +7529,7 @@
 		"AbilityTextureName"			"Pistoletov/Pirat"
 		"AbilityCastRange"				"350"
 		"AbilityCastPoint"				"0.35"
-		"AbilityCooldown"				"70"
+		"AbilityCooldown"				"50"
 		"AbilityManaCost"				"150"
 		"AOERadius"						"600"
 		"HasShardUpgrade"				"1"
@@ -10284,7 +10284,7 @@
 		{
 			"radius"					"400"
 			"damage"					"225 300 375 450"
-			"stun_duration"				"1.5 2 2.5 3"
+			"stun_duration"				"1.0 1.2 1.4 1.6"
 		}
 	}
 
@@ -10301,7 +10301,7 @@
 
 		"AbilityValues"
 		{
-			"duration"				"30"
+			"duration"				"20"
 			"base_attack_time"
 			{
 				"value"									"0.8 0.7 0.6"
@@ -11481,7 +11481,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityManaCost"				"50"
-		"AbilityCooldown"				"15 13 11 9"
+		"AbilityCooldown"				"13 11 8 6"
 		"HasShardUpgrade"				"1"
 
 		"AbilityValues"
@@ -11509,7 +11509,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-		"AbilityCooldown"				"60"
+		"AbilityCooldown"				"50"
 		"HasScepterUpgrade"				"1"
 
 		"AbilityValues"
