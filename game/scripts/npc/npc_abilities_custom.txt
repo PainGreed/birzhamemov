@@ -18570,7 +18570,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"AbilityTextureName"			"Gypsy/Tabor"
 		"AbilityCooldown"				"20 19 18 17"
-		"AbilityManaCost"				"70"
+		"AbilityManaCost"				"70 90 110 130"
 		"AbilityCastRange"				"900"
 	}
 
@@ -18679,7 +18679,7 @@
 		"AbilityValues"
 		{
 			"stun_duration"						"1"
-			"damage"							"100 175 250 325"
+			"damage"							"125 175 225 275"
 			"bonus_damage"						"10 30 50 70"
 			"effect_duration"					"6"
 			"debuff_duration"					"3"
@@ -18764,7 +18764,7 @@
 
 		"AbilityValues"
 		{
-			"value"						"40"			
+			"value"						"30"			
 		}
 	}
 	"special_bonus_birzha_gypsy_8"
