@@ -19,6 +19,10 @@ function Kurumi_eight_bullet:OnSpellStart()
     if not IsServer() then return end
     self:GetCaster():EmitSound("Hero_PhantomLancer.Doppelganger.Cast")
     local doppleganger_particle = ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_lancer/phantom_lancer_doppleganger_aoe.vpcf", PATTACH_WORLDORIGIN, self:GetCaster())
+    local illusion_kurumu_out_damage_one = 100 - self:GetSpecialValueFor("illusion_1_damage_out_pct") - self:GetCaster():FindTalentValue("special_bonus_talent_kurumi_damage_illusions")
+	local illusion_kurumu_in_damage_one = 100 - self:GetSpecialValueFor("illusion_1_damage_in_pct")
+	local illusion_kurumu_out_damage_two = 100 - self:GetSpecialValueFor("illusion_2_damage_out_pct") - self:GetCaster():FindTalentValue("special_bonus_talent_kurumi_damage_illusions")
+	local illusion_kurumu_in_damage_two = 100 - self:GetSpecialValueFor("illusion_2_damage_in_pct")
     ParticleManager:SetParticleControl(doppleganger_particle, 0, self:GetCaster():GetAbsOrigin())
     ParticleManager:SetParticleControl(doppleganger_particle, 2, Vector(self:GetSpecialValueFor("target_aoe"), self:GetSpecialValueFor("target_aoe"), self:GetSpecialValueFor("target_aoe")))
     ParticleManager:SetParticleControl(doppleganger_particle, 3, Vector(self:GetSpecialValueFor("delay"), 0, 0))
@@ -39,11 +43,11 @@ function Kurumi_eight_bullet:OnSpellStart()
         end
     end
     for i=1,illusion_count do
-        local outgoing_damage = self:GetSpecialValueFor("illusion_1_damage_out_pct")
-        local incoming_damage = self:GetSpecialValueFor("illusion_1_damage_in_pct")
+        local outgoing_damage = -illusion_kurumu_out_damage_one
+        local incoming_damage = -illusion_kurumu_in_damage_one
         if i > 1 then
-            outgoing_damage = self:GetSpecialValueFor("illusion_2_damage_out_pct")
-            incoming_damage = self:GetSpecialValueFor("illusion_2_damage_in_pct")
+            outgoing_damage = -illusion_kurumu_out_damage_two
+            incoming_damage = -illusion_kurumu_in_damage_two
         end
         local illusions = BirzhaCreateIllusion(self:GetCaster(), self:GetCaster(), 
         {
