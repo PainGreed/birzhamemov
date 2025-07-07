@@ -1,6 +1,6 @@
 "itembuilds"
 {
-	"author"	""
+	"author"	"Pain_Greed"
 	"hero"		"npc_dota_hero_travoman"
 	"tile"		"Birzha memov"
 
@@ -8,43 +8,47 @@
 	{
 		"#DOTA_Item_Build_Starting_Items"
 		{
+			"item"		"item_null_talisman"
 			"item"		"item_boots"
+			"item"		"item_null_talisman"
+			"item"		"item_wind_lace"
 			"item"		"item_abakan"
-                        "item"          "item_flask"
-                        "item"          "item_bond"
-
+			"item"      "item_flask"
+			"item"		"item_bond"
 		}
 		"#DOTA_Item_Build_Early_Game"
         {
-			"item"		  "item_roscom_midas"
-			"item"		  "item_aghanim"
-                        "item"            "item_baldezh"
-                        "item"            "item_angel_boots"
+			"item"		"item_aghanims_shard"
+			"item"		"item_boots_of_invisibility"
+			"item"      "item_magical_rapier"
+			"item"		"item_ultimate_scepter"
         }
 		"#DOTA_Item_Build_Core_Items"
 		{
-			"item"		"item_magic_armor"
-                        "item"          "item_radiance_2"
-			"item"		"item_utimate_mem"
-                        "item"          "item_meteor"
-                        "item"          "item_sharoeb"
-                        "item"          "item_force_staff"
-                        "item"          "item_magical_rapier"
-                        "item"          "item_tar2"
-                        "item"          "item_aether_lupa"
-                        "item"          "item_armor_damned"
-                        "item"          "item_shakal"
-
-
-
+			"item"       "item_force_staff"
+			"item"       "item_radiance_2"
+			"item"		 "item_utimate_mem"
+			"item"       "item_meteor"
+			"item"       "item_sharoeb"
+			"item"       "item_aether_lupa"
+			"item"       "item_armor_damned"
+			"item"       "item_weapon_shakal"
+			"item"       "item_ship_magic_armor"
+			"item"		 "item_mystic_booster"
+			"item"		 "item_sheepstick"
+		}
 		"#DOTA_Item_Build_Luxury_Items"
 		{
+			"item"		"item_ward_sentry"
+			"item"		"item_roscom_midas"
 			"item"		"item_birzha_gem"
 			"item"		"item_burger_sobolev"
 			"item"		"item_burger_oblomoff"
 			"item"		"item_burger_larin"
         	"item"		"item_refresher_shard_custom"
-        	"item"		"item_refresher_shard_custom"
+			"item"		"item_blink_boots"
+			"item"		"item_uebator"
+			
 		}
 
 	}
