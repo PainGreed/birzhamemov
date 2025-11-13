@@ -12,7 +12,7 @@ function BirzhaGameMode:CreateFountainThinkers()
             if find_fountain then
                 local ability_fountain = find_fountain:FindAbilityByName("ability_fountain")
                 if ability_fountain then
-                    CreateModifierThinker(find_fountain, ability_fountain, "modifier_birzha_fountain_passive", {fountain = find_fountain:entindex()}, trigger:GetAbsOrigin(), team, false)
+                    CreateModifierThinker(find_fountain, ability_fountain, "modifier_birzha_fountain_passive", {}, trigger:GetAbsOrigin(), team, false)
                 end
             end
         end
@@ -90,7 +90,6 @@ function BirzhaGameMode:OnGameRulesStateChange(params)
 	end
 
 	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-        CreateModifierThinker(nil, nil, "modifier_birzha_map_center_vision", {radius = self.effectradius}, Vector(0, 0, 0), DOTA_TEAM_NEUTRALS, false)
         birzha_hero_selection:EndSelectionAndStartGameFromDota()
 		Timers:CreateTimer(1, function()
             SpawnDonaters()
@@ -147,7 +146,7 @@ function BirzhaGameMode:OnItemPickUp(event)
     
     -- Обработка мешков с золотом
     if itemName == "item_bag_of_gold" then
-        self:GiveGoldAndRemoveItem(owner, 300, item)
+        self:GiveGoldAndRemoveItem(owner, 150, item)
     elseif itemName == "item_bag_of_gold_event" then
         self:GiveGoldAndRemoveItem(owner, 25, item)
     -- Обработка особого мешка с золотом Van
@@ -294,10 +293,10 @@ function BirzhaGameMode:PlayHeroSpecificSounds(killer, victim)
             death = {sound = "sasake_death", chance = 25},
             kill = {sound = "sasake_kill", chance = 25}
         },
-        npc_dota_hero_travoman = {
-            death = {sound = "travoman_death", chance = 25},
-            kill = {sound = "travoman_kill", chance = 25}
-        },
+        -- npc_dota_hero_travoman = {
+            -- death = {sound = "travoman_death", chance = 25},
+            -- kill = {sound = "travoman_kill", chance = 25}
+        -- },
         npc_dota_hero_old_god = {
             death = {sound = "stariy_death", chance = 100}
         }
@@ -641,10 +640,10 @@ function BirzhaGameMode:PlayHeroSpawnSounds(hero)
         ["npc_dota_hero_ashab_tamaev"] = {
             always = "ashab_spawn"
         },
-        ["npc_dota_hero_travoman"] = {
-            firstSpawn = "travoman_spawn",
-            respawn = {sound = "travoman_spawn", chance = 25}
-        },
+        -- ["npc_dota_hero_travoman"] = {
+            -- firstSpawn = "travoman_spawn",
+            -- respawn = {sound = "travoman_spawn", chance = 25}
+        -- },
         ["npc_dota_hero_sasake"] = {
             respawn = {sound = "sasake_respawn", chance = 20}
         }
